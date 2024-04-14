@@ -1,15 +1,25 @@
-import { Route, Routes } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ErrorPage } from "../components/ErrorPage";
 import { Home } from "../pages/Home/Home";
 import { Login } from "../pages/Login/Login";
 
 export const Router = () => {
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "/login",
+      element: <Login />
+    }
+  ])
+
   return (
     <>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <RouterProvider router={router} />
     </>
   )
 }

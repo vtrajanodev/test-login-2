@@ -3,7 +3,13 @@
     {
       "id": 1,
       "email": "teste@exemplo.com",
-      "password": 123,
+      "password": "123",
+      "token": "token123"
+    },
+    {
+      "id": 2,
+      "email": "teste@gmail.com",
+      "password": "1234",
       "token": "token123"
     }
   ]
